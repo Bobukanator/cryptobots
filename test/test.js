@@ -1,7 +1,7 @@
 //Mocha tests to learn more about uniswap
 var fs = require('fs');
 var vm = require('vm');
-var path = 'app/app.js';
+var path = 'bots/app.js';
 
 
 var assert = require('assert');
@@ -15,11 +15,11 @@ import { abi as IUniswapV3PoolABI } from "@uniswap/v3-core/artifacts/contracts/i
 var code = fs.readFileSync(path);
 vm.runInThisContext(code);
 
-suite('Initialize Uniswap Fun Basic stuff', function(){
+suite('Initialize Uniswap Fun Basic stuff', function () {
 
-  test('get Pool State', function(){
-     var expected = "";
-     assert.equal(0,1);
+  test('get Pool State', function () {
+    var expected = "";
+    assert.equal(0, 1);
   })
 
 });
