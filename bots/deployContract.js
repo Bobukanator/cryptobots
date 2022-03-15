@@ -1,8 +1,19 @@
+/**
+ * This simple script will deploy a smart contract on the defined ethereum network 
+ * using Infura - code based on Infura documentation here
+ * https://docs.infura.io/infura/networks/ethereum/tutorials/transactions/deploy-a-contract-using-web3.js
+ * This script has the following dependencies:
+ * INFURA_PROJECT_ID = your infura project id
+ * ETHEREUM_NETWORK = ethereum network you want to deploy the smart contract on
+ * SIGNER_PRIVATE_KEY = private key of your wallet private key -- KEEP THIS SAFE!! 
+ *                      if you are testing, use a test account
+ * CONTRACT_JSON_FILELOCATION = file location of compiled solidity smart contract
+ */
 const Web3 = require("web3");
 
 //Load the contract ABI and Bytecode 
 const fs = require("fs");
-const { abi, bytecode } = JSON.parse(fs.readFileSync("../bin/"));
+const { abi, bytecode } = JSON.parse(fs.readFileSync("../bin/cryptobots/contracts/SiameseCat.json"));
 
 async function main() {
   // Configuring the connection to an Ethereum node
@@ -35,7 +46,7 @@ async function main() {
   // The contract is now deployed on chain!
   console.log(`Contract deployed at ${deployedContract.options.address}`);
   console.log(
-    `Add DEMO_CONTRACT to the.env file to store the contract address: ${deployedContract.options.address}`
+    `Add to the.env file to store the contract address: ${deployedContract.options.address}`
   );
 }
 

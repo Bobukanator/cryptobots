@@ -1,8 +1,4 @@
 {
-  "devDependencies": {
-    "@uniswap/sdk-core": "^3.0.1",
-    "@uniswap/v3-sdk": "^3.6.3"
-  },
   "dependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
@@ -15,9 +11,12 @@
     "web3": "^1.7.0"
   },
   "scripts": {
-    "test": " mocha -u tdd --require @babel/register"
+    "test": "jest"
   },
   "directories": {
     "test": "tests"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
