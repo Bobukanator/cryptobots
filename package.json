@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/register": "^7.16.7",
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
+    "ethers": "^5.5.2",
+    "web3": "^1.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
